@@ -1,60 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Adil Ansary | SQA Engineer</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Optional: Font Awesome for icons (or remove and use emoji/svg) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-S..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg-card: rgba(30, 41, 59, 0.6);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #6366f1;        /* indigo */
+      --accent-dark: #4f46e5;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 10px 30px -15px rgba(0,0,0,0.6);
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-card: rgba(255,255,255,0.75);
+      --text: #0f172a;
+      --text-muted: #475569;
+      --accent: #4f46e5;
+      --accent-dark: #4338ca;
+      --border: rgba(0,0,0,0.06);
+      --shadow: 0 10px 30px -12px rgba(0,0,0,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 0 3rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.2rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    .role {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .summary {
+      font-size: 1.15rem;
+      max-width: 65ch;
+      margin: 0 auto 3rem;
+      color: var(--text-muted);
+    }
+
+    section {
+      margin-bottom: 4rem;
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      position: relative;
+      display: inline-block;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 40%;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .skill-category h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    li {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    li i {
+      color: var(--accent);
+      width: 1.25rem;
+      text-align: center;
+    }
+
+    .contact ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .contact a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+      background: rgba(99,102,241,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Optional dark/light toggle (add button in HTML if you want) */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 1.8rem; }
+      header { padding: 3rem 0 2rem; }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Adil Ansary</h1>
-    <h2>Software Quality Assurance Engineer</h2>
 
-    <p class="summary">
-      Software Quality Assurance Engineer with experience in manual and automation testing.
-      Skilled in designing test cases, identifying edge cases, and ensuring software reliability
-      through structured and detail-oriented testing.
-    </p>
+  <!-- Optional toggle - uncomment if you want -->
+  <!-- <button class="theme-toggle" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'light' ? '' : 'light'">Toggle Theme</button> -->
+
+  <div class="container">
+    <header>
+      <h1>Adil Ansary</h1>
+      <div class="role">Software Quality Assurance Engineer</div>
+      <p class="summary">
+        Detail-oriented SQA Engineer with strong experience in manual & automation testing. 
+        Specialized in test strategy, edge-case discovery, regression suites, and building reliable automation frameworks to ship high-quality software faster.
+      </p>
+    </header>
 
     <section class="about-me">
       <h3>About Me</h3>
       <p>
-        I am a detail-oriented Software Quality Assurance Engineer specializing in both manual
-        and automation testing. I have experience creating test plans, writing and executing test cases,
-        and implementing automation scripts to improve testing efficiency.
+        Passionate about software quality and delivering bug-free user experiences. 
+        I design comprehensive test plans, execute thorough testing cycles (functional, regression, exploratory, UAT), 
+        and develop maintainable automation scripts using modern tools. Always aiming to reduce manual effort while increasing coverage and confidence.
       </p>
     </section>
 
     <section class="skills">
-      <h3>Skills</h3>
-      <h4>Manual Testing</h4>
-      <ul>
-        <li>Test case design & execution</li>
-        <li>Regression testing</li>
-        <li>Smoke testing</li>
-        <li>Exploratory testing</li>
-        <li>User Acceptance Testing (UAT)</li>
-        <li>Tools: JIRA, Redmine</li>
-      </ul>
-      <h4>Automation Testing</h4>
-      <ul>
-        <li>Web apps: Selenium (Java), Playwright (JS/TS)</li>
-        <li>Mobile apps: WebDriverIO, Appium (JavaScript)</li>
-        <li>Programming languages: Java, JavaScript, TypeScript, Python</li>
-        <li>CI/CD integration: GitHub Actions, Jenkins</li>
-      </ul>
+      <h3>Core Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Manual Testing</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i>Test Case Design & Execution</li>
+            <li><i class="fas fa-check-circle"></i>Regression & Smoke Testing</li>
+            <li><i class="fas fa-search"></i>Exploratory & Ad-hoc Testing</li>
+            <li><i class="fas fa-users"></i>User Acceptance Testing (UAT)</li>
+            <li><i class="fas fa-bug"></i>Bug Reporting & Triaging</li>
+            <li><i class="fas fa-tools"></i>Tools: JIRA, Redmine, TestRail</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4>Automation & Dev Tools</h4>
+          <ul>
+            <li><i class="fas fa-robot"></i>Selenium (Java)</li>
+            <li><i class="fas fa-robot"></i>Playwright (JS/TS)</li>
+            <li><i class="fas fa-mobile-alt"></i>Appium & WebDriverIO (Mobile)</li>
+            <li><i class="fas fa-code"></i>Java · JavaScript · TypeScript · Python</li>
+            <li><i class="fas fa-cogs"></i>CI/CD: GitHub Actions, Jenkins</li>
+            <li><i class="fas fa-terminal"></i>Git & Version Control Best Practices</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="contact">
-      <h3>Contact</h3>
+      <h3>Get in Touch</h3>
       <ul>
-        <li>Email: <a href="mailto:ansaryhere@gmail.com">ansaryhere@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/adilansary" target="_blank">github.com/adilansary</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/adilansary" target="_blank">linkedin.com/in/adilansary</a></li>
-        <li>Phone: <a href="tel:+8801521402253">+8801521402253</a></li>
+        <li><a href="mailto:ansaryhere@gmail.com"><i class="fas fa-envelope"></i>ansaryhere@gmail.com</a></li>
+        <li><a href="https://github.com/adilansary" target="_blank" rel="noopener"><i class="fab fa-github"></i>github.com/adilansary</a></li>
+        <li><a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>linkedin.com/in/adilansary</a></li>
+        <li><a href="tel:+8801521402253"><i class="fas fa-phone"></i>+880 152 140 2253</a></li>
       </ul>
     </section>
   </div>
-</body>
 
+</body>
 </html>
