@@ -242,10 +242,36 @@ li i {
 
   .hero {
     gap: 1.5rem;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .hero-text {
     text-align: center;
+  }
+
+  .summary {
+    margin-bottom: 2rem;
+  }
+
+  .hero-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 0.75rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
   }
 }
 
