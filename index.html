@@ -1,216 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adil Ansary | SQA Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-S..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    :root {
-      --bg: #0f1117;
-      --bg-card: rgba(30, 41, 59, 0.6);
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --accent: #6366f1;        /* indigo */
-      --accent-dark: #4f46e5;
-      --border: rgba(255,255,255,0.08);
-      --shadow: 0 10px 30px -15px rgba(0,0,0,0.6);
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-S..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    [data-theme="light"] {
-      --bg: #f8fafc;
-      --bg-card: rgba(255,255,255,0.75);
-      --text: #0f172a;
-      --text-muted: #475569;
-      --accent: #4f46e5;
-      --accent-dark: #4338ca;
-      --border: rgba(0,0,0,0.06);
-      --shadow: 0 10px 30px -12px rgba(0,0,0,0.12);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      padding: 2rem 1rem;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      padding: 4rem 0 3rem;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 4.2rem);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.025em;
-    }
-
-    .role {
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .summary {
-      font-size: 1.15rem;
-      max-width: 65ch;
-      margin: 0 auto 3rem;
-      color: var(--text-muted);
-    }
-
-    section {
-      margin-bottom: 4rem;
-      background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 2.5rem;
-      box-shadow: var(--shadow);
-    }
-
-    h3 {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: var(--text);
-      position: relative;
-      display: inline-block;
-    }
-
-    h3::after {
-      content: '';
-      position: absolute;
-      bottom: -0.5rem;
-      left: 0;
-      width: 40%;
-      height: 3px;
-      background: var(--accent);
-      border-radius: 3px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 640px) {
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .skill-category h4 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--text);
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    li {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    li i {
-      color: var(--accent);
-      width: 1.25rem;
-      text-align: center;
-    }
-
-    .contact ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .contact a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem;
-      border-radius: 0.5rem;
-      background: rgba(255,255,255,0.03);
-    }
-
-    .contact a:hover {
-      color: var(--accent);
-      background: rgba(99,102,241,0.1);
-      transform: translateY(-2px);
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 0.6rem 1rem;
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 1rem;
-      backdrop-filter: blur(10px);
-    }
-
-    @media (max-width: 640px) {
-      section { padding: 1.8rem; }
-      header { padding: 3rem 0 2rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <button class="theme-toggle" type="button" aria-pressed="true" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i><span>Dark</span>
+  </button>
 
   <div class="container">
     <header>
-      <h1>Adil Ansary</h1>
-      <div class="role">Software Quality Assurance Engineer</div>
-      <p class="summary">
-        Detail-oriented SQA Engineer with strong experience in manual & automation testing. 
-        Specialized in test strategy, edge-case discovery, regression suites, and building reliable automation frameworks to ship high-quality software faster.
-      </p>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Adil Ansary</h1>
+          <div class="role">Software Quality Assurance Engineer</div>
+          <p class="summary">
+            Detail-oriented SQA Engineer with strong experience in manual & automation testing.
+            Specialized in test strategy, edge-case discovery, regression suites, and building reliable automation
+            frameworks to ship high-quality software faster.
+          </p>
+        </div>
+        <div class="hero-photo" aria-hidden="true">
+          <img src="assets/images/profile.jpg" alt="Portrait of Adil Ansary" loading="lazy" />
+        </div>
+      </div>
     </header>
 
     <section class="about-me">
       <h3>About Me</h3>
       <p>
-        Passionate about software quality and delivering bug-free user experiences. 
-        I design comprehensive test plans, execute thorough testing cycles (functional, regression, exploratory, UAT), 
-        and develop maintainable automation scripts using modern tools. Always aiming to reduce manual effort while increasing coverage and confidence.
+        Passionate about software quality and delivering bug-free user experiences.
+        I design comprehensive test plans, execute thorough testing cycles (functional, regression, exploratory, UAT),
+        and develop maintainable automation scripts using modern tools. Always aiming to reduce manual effort while
+        increasing coverage and confidence.
       </p>
+    </section>
+
+    <section class="experience">
+      <h3>Professional Experience</h3>
+      <div class="timeline">
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-date">January 2025 – Present</div>
+            <h4>Software Quality Engineer II</h4>
+            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+            <ul>
+              <li>Handled full-cycle testing (manual + automation) for multiple projects, including leading mobile app
+                testing initiatives single-handedly.</li>
+              <li>Developed and maintained automation scripts using Playwright (JS/TS), WebDriverIO, and Appium for web
+                and mobile applications.</li>
+              <li>Designed comprehensive test cases, executed regression/smoke/exploratory testing, and ensured
+                high-quality deliveries.</li>
+              <li>Shared testing best practices and automation approaches with the team to improve overall efficiency.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="timeline-date">January 2024 – December 2024</div>
+            <h4>Software Quality Engineer I</h4>
+            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+            <ul>
+              <li>Performed both manual and automated testing, with a strong focus on mobile applications using
+                WebDriverIO and Appium.</li>
+              <li>Designed and executed test cases for functional, regression, and exploratory scenarios across web and
+                mobile platforms.</li>
+              <li>Automated key test flows to reduce manual effort and improve coverage.</li>
+              <li>Reported and tracked defects using tools like JIRA and Redmine, collaborating with developers for
+                quick resolutions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="timeline-date">June 2023 – December 2023</div>
+            <h4>Software Quality Assurance Intern</h4>
+            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+            <ul>
+              <li>Learned core manual testing techniques, including test case design, execution, and various testing
+                methods (smoke, regression, exploratory).</li>
+              <li>Designed and documented test cases for software features under guidance.</li>
+              <li>Assisted in bug identification, reporting, and basic test execution cycles.</li>
+              <li>Gained foundational knowledge of QA processes and tools in a real-world development environment.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class="skills">
@@ -244,14 +136,18 @@
 
     <section class="contact">
       <h3>Get in Touch</h3>
-      <ul>
+      <ol>
         <li><a href="mailto:ansaryhere@gmail.com"><i class="fas fa-envelope"></i>ansaryhere@gmail.com</a></li>
-        <li><a href="https://github.com/adilansary" target="_blank" rel="noopener"><i class="fab fa-github"></i>github.com/adilansary</a></li>
-        <li><a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>linkedin.com/in/adilansary</a></li>
+        <li><a href="https://github.com/adilansary" target="_blank" rel="noopener"><i
+              class="fab fa-github"></i>github.com/adilansary</a></li>
+        <li><a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener"><i
+              class="fab fa-linkedin"></i>linkedin.com/in/adilansary</a></li>
         <li><a href="tel:+8801521402253"><i class="fas fa-phone"></i>+880 152 140 2253</a></li>
-      </ul>
+      </ol>
     </section>
   </div>
 
+  <script src="js/main.js"></script>
 </body>
+
 </html>
