@@ -211,7 +211,8 @@ li i {
 }
 
 .contact li {
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact a {
@@ -223,12 +224,13 @@ li i {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.8rem 0.6rem;
+  padding: 1rem 0.8rem;
   border-radius: 0.75rem;
   background: rgba(255, 255, 255, 0.03);
   min-height: 3.2rem;
   text-align: center;
   font-size: 0.85rem;
+  width: 100%;
 }
 
 .contact a i {
