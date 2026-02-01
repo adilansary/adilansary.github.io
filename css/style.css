@@ -107,6 +107,23 @@ section {
   box-shadow: var(--shadow);
 }
 
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.download-cv-btn:hover {
+  background: var(--accent-dark);
+}
+
 h3 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -311,12 +328,21 @@ li i {
 .experience {
   margin-bottom: 4rem;
 }
+.education {
+  margin-bottom: 4rem;
+}
 
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
+}
+.experience-duration {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 1rem;
 }
 
 .timeline-content,
@@ -404,6 +430,27 @@ li i {
   margin-bottom: 1rem;
   font-style: italic;
 }
+.institute {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.thesis {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+.cgpa {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
 
 .timeline-item ul {
   list-style: none;
