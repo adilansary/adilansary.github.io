@@ -325,6 +325,10 @@ li i {
     top: 1rem;
     right: 1rem;
   }
+
+  .contact ol {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .experience {
