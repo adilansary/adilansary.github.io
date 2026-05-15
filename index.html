@@ -1,180 +1,538 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adil Ansary — SQA Engineer II specializing in E2E & API automation frameworks with Playwright, Selenium, and CI/CD pipelines." />
+  <meta name="keywords" content="SQA Engineer, QA Automation, Playwright, Selenium, API Testing, CI/CD, Test Automation" />
+  <meta property="og:title" content="Adil Ansary | SQA Engineer II" />
+  <meta property="og:description" content="Building robust automation frameworks that ship quality software at speed." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
   <title>Adil Ansary | SQA Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-S..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">Adil Ansary</a>
-      <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ====== Navigation ====== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Adil Ansary – Home">
+        <span>Adil<span class="accent-dot">.</span></span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about"      class="nav-link">About</a>
         <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#contact"    class="nav-link">Contact</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle color theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="assets/cv/resume.pdf" download class="btn btn-sm">
+          <i class="fas fa-download"></i>
+          <span>Resume</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <button class="theme-toggle" type="button" aria-pressed="true" aria-label="Toggle theme">
-    <i class="fas fa-moon"></i><span>Dark</span>
-  </button>
+  <main id="main">
 
-  <div class="container">
-    <header id="home">
-      <div class="hero">
-        <div class="hero-text">
-          <h1>Adil Ansary</h1>
-          <div class="role">Software Quality Assurance Engineer</div>
-          <p class="summary">
-           Crafting robust E2E & API Automation frameworks with CI/CD pipelines that scale, speed up delivery and ensure rock-solid quality.
-          </p>
-        </div>
-        <div class="hero-photo" aria-hidden="true">
-          <img src="assets/images/profile.jpg" alt="Portrait of Adil Ansary" loading="lazy" />
-        </div>
+    <!-- ====== Hero ====== -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
       </div>
-    </header>
 
-    <section class="about-me" id="about"> 
-      <h3>About Me</h3>
-      <p>
-        Automation Engineer focused on quality at speed. I create resilient E2E and API frameworks & scripts with POM, integrated into CI/CD (Jenkins/GitHub Actions) to increase coverage, reduce manual effort, and ship flake-free releases faster. Strong manual testing experience in exploratory, functional, and UAT testing.
-      </p>
-      <a href="assets/cv/resume.pdf" download class="download-cv-btn"><i class="fas fa-download"></i> Download CV</a>
-    </section>
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              Available for opportunities
+            </div>
 
-    <section class="experience" id="experience">
-      <h3>Professional Experience <span class="experience-duration">2 years 7 months</span></h3>
-      <div class="timeline">
+            <h1 class="hero-name">
+              Adil <span class="name-accent">Ansary</span>
+            </h1>
 
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-date">January 2025 – Present</div>
-            <h4>Software Quality Assurance Engineer II</h4>
-            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+            <p class="hero-role">
+              <span class="role-static">I build </span><span class="role-typed" id="typed-role" aria-label="automation frameworks"></span>
+            </p>
+
+            <p class="hero-bio">
+              SQA Engineer II crafting resilient E2E &amp; API automation frameworks with CI/CD pipelines that scale, speed up delivery, and ensure rock-solid quality.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                View Work <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:ansaryhere@gmail.com" class="social-link" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="avatar-wrap">
+              <img src="assets/images/profile.jpg" alt="Adil Ansary" width="320" height="320" />
+              <div class="avatar-ring r1"></div>
+              <div class="avatar-ring r2"></div>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-date">January 2024 – December 2024</div>
-            <h4>Software Quality Assurance Engineer I</h4>
-            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+        <!-- Stats bar -->
+        <div class="stats-bar" role="list">
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="2">0</span><span class="stat-sfx">+</span>
+            <span class="stat-lbl">Years Experience</span>
           </div>
-        </div>
-
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-date">June 2023 – December 2023</div>
-            <h4>Software Quality Assurance Intern</h4>
-            <p class="company">Brotecs Technologies Limited, Dhaka, Bangladesh</p>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="500">0</span><span class="stat-sfx">+</span>
+            <span class="stat-lbl">Test Cases Written</span>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="skills" id="skills">
-      <h3>Core Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Manual Testing</h4>
-          <ul>
-            <li><i class="fas fa-check-circle"></i>Test Case Design & Execution</li>
-            <li><i class="fas fa-check-circle"></i>Regression & Smoke Testing</li>
-            <li><i class="fas fa-search"></i>Exploratory & Ad-hoc Testing</li>
-            <li><i class="fas fa-users"></i>User Acceptance Testing (UAT)</li>
-              <li><i class="fas fa-robot"></i>REST API- Postman</li>
-            <li><i class="fas fa-bug"></i>Bug Reporting & Triaging</li>
-            <li><i class="fas fa-tools"></i>Tools: JIRA, Redmine, TestRail</li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h4>Automation & Dev Tools</h4>
-          <ul>
-            <li><i class="fas fa-robot"></i>Playwright (JavaScript, TypeScript, Python)</li>
-            <li><i class="fas fa-robot"></i>Selenium (Java)</li>
-            <li><i class="fas fa-mobile-alt"></i>Appium & WebDriverIO (Mobile)</li>
-            <li><i class="fas fa-code"></i>JavaScript · TypeScript · Python · Java</li>
-            <li><i class="fas fa-cogs"></i>CI/CD: GitHub Actions, Jenkins</li>
-            <li><i class="fas fa-terminal"></i>Redmine, Git & Version Control Best Practices</li>
-          </ul>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="15">0</span><span class="stat-sfx">+</span>
+            <span class="stat-lbl">Automation Scripts</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="3">0</span><span class="stat-sfx"></span>
+            <span class="stat-lbl">CI/CD Pipelines Built</span>
+          </div>
         </div>
       </div>
     </section>
 
-        <section class="education" id="education">
-      <h3>Education</h3>
-      <div class="timeline">
-
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-date">2017 - 2021</div>
-            <h4>B.Sc in Computer Science and Engineering</h4>
-            <p class="institute">Daffodil International University, Dhaka, Bangladesh</p>
-            <p class="cgpa"><strong>CGPA:</strong> 3.53 / 4.00</p>
-            <p class="thesis"><strong>Thesis:</strong> A Comparative Study on Detecting Bangla Fake News on Social Media Using Machine Learning Algorithms </p>
-          </div>
+    <!-- ====== About ====== -->
+    <section id="about" class="section" aria-labelledby="about-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About</span>
+          <h2 id="about-h" class="section-title">Who I Am</h2>
         </div>
 
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-date">2014 - 2016</div>
-            <h4>Higher Secondary Certificate (HSC)</h4>
-            <p class="institute"> Cox's Bazar Government College, Cox's Bazar, Bangladesh</p>
+        <div class="about-layout reveal">
+          <div class="about-text">
+            <p class="about-lead">
+              I'm an Automation Engineer focused on quality at speed — building systems that catch bugs before they reach users.
+            </p>
+            <p>
+              I create resilient E2E and API frameworks using POM design patterns, integrated into CI/CD pipelines with Jenkins and GitHub Actions to increase test coverage, reduce manual effort, and ship flake-free releases faster.
+            </p>
+            <p>
+              Beyond automation, I bring strong manual testing expertise across exploratory, functional, and UAT testing — bridging the gap between development velocity and product quality.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight">
+                <i class="fas fa-robot"></i>
+                <div><strong>Test Automation</strong><span>Playwright · Selenium · Appium</span></div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-code-branch"></i>
+                <div><strong>CI/CD Integration</strong><span>GitHub Actions · Jenkins</span></div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-plug"></i>
+                <div><strong>API Testing</strong><span>REST · Postman · Playwright API</span></div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-mobile-alt"></i>
+                <div><strong>Mobile Testing</strong><span>Appium · WebDriverIO</span></div>
+              </div>
+            </div>
+
+            <a href="assets/cv/resume.pdf" download class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
           </div>
         </div>
-
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <h3>Get in Touch</h3>
-      <ol>
-        <li><a href="mailto:ansaryhere@gmail.com"><i class="fas fa-envelope"></i>ansaryhere@gmail.com</a></li>
-        <li><a href="https://github.com/adilansary" target="_blank" rel="noopener"><i
-              class="fab fa-github"></i>Github/adilansary</a></li>
-        <li><a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener"><i
-              class="fab fa-linkedin"></i>Linkedin/adilansary</a></li>
-        <li><a href="tel:+8801521402253"><i class="fas fa-phone"></i>+8801521402253</a></li>
-      </ol>
-    </section>
-  </div>
+    <!-- ====== Experience ====== -->
+    <section id="experience" class="section section-alt" aria-labelledby="exp-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Career</span>
+          <h2 id="exp-h" class="section-title">Experience</h2>
+          <p class="section-desc">2 years 7 months of professional quality engineering</p>
+        </div>
 
-  <!-- <div class="banner-section">
-      <div class="current-banner">
-        <span class="banner-label"><i class="fas fa-briefcase"></i> Currently Working:</span>
-        <span class="banner-role">SQA Engineer II @ Brotecs Technologies Limited</span>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">SQA Engineer II</h3>
+                  <p class="tl-company"><i class="fas fa-building"></i> Brotecs Technologies Limited</p>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date"><i class="fas fa-calendar-alt"></i> Jan 2025 – Present</span>
+                  <span class="badge-current">Current</span>
+                </div>
+              </div>
+              <p class="tl-location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">SQA Engineer I</h3>
+                  <p class="tl-company"><i class="fas fa-building"></i> Brotecs Technologies Limited</p>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date"><i class="fas fa-calendar-alt"></i> Jan 2024 – Dec 2024</span>
+                </div>
+              </div>
+              <p class="tl-location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            </div>
+          </div>
+
+          <div class="tl-item reveal">
+            <div class="tl-marker">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">SQA Intern</h3>
+                  <p class="tl-company"><i class="fas fa-building"></i> Brotecs Technologies Limited</p>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date"><i class="fas fa-calendar-alt"></i> Jun 2023 – Dec 2023</span>
+                </div>
+              </div>
+              <p class="tl-location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-banner">
-        <a href="mailto:ansaryhere@gmail.com" title="Email" target="_blank" rel="noopener"><i class="fas fa-envelope"></i></a>
-        <a href="https://facebook.com/adil.ansary" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-        <a href="https://github.com/adilansary" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/adilansary" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+    </section>
+
+    <!-- ====== Skills ====== -->
+    <section id="skills" class="section" aria-labelledby="skills-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Expertise</span>
+          <h2 id="skills-h" class="section-title">Skills &amp; Tools</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <div class="skill-group-hd">
+              <i class="fas fa-clipboard-check"></i>
+              <h3>Manual Testing</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Test Case Design</span>
+              <span class="tag">Regression Testing</span>
+              <span class="tag">Smoke Testing</span>
+              <span class="tag">Exploratory Testing</span>
+              <span class="tag">UAT</span>
+              <span class="tag">Bug Reporting & Triaging</span>
+              <span class="tag">Functional Testing</span>
+              <span class="tag">Test Planning</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-group-hd">
+              <i class="fas fa-robot"></i>
+              <h3>Automation</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-accent">Playwright</span>
+              <span class="tag tag-accent">Selenium</span>
+              <span class="tag tag-accent">Appium</span>
+              <span class="tag">WebDriverIO</span>
+              <span class="tag">POM Pattern</span>
+              <span class="tag">E2E Testing</span>
+              <span class="tag">API Automation</span>
+              <span class="tag">Mobile Automation</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-group-hd">
+              <i class="fas fa-code"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-accent">JavaScript</span>
+              <span class="tag tag-accent">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-group-hd">
+              <i class="fas fa-cogs"></i>
+              <h3>CI/CD &amp; Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag-accent">GitHub Actions</span>
+              <span class="tag tag-accent">Jenkins</span>
+              <span class="tag">Git</span>
+              <span class="tag">Postman</span>
+              <span class="tag">JIRA</span>
+              <span class="tag">TestRail</span>
+              <span class="tag">Redmine</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div> -->
+    </section>
+
+    <!-- ====== Projects ====== -->
+    <section id="projects" class="section section-alt" aria-labelledby="proj-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Work</span>
+          <h2 id="proj-h" class="section-title">Projects</h2>
+          <p class="section-desc">Selected automation frameworks and testing projects</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="proj-top">
+              <div class="proj-icon"><i class="fas fa-robot"></i></div>
+              <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="proj-gh" aria-label="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h3 class="proj-title">E2E Automation Framework</h3>
+            <p class="proj-desc">
+              Playwright-based end-to-end automation framework with POM design pattern, parallel execution, and GitHub Actions CI/CD integration for continuous testing.
+            </p>
+            <div class="proj-stack">
+              <span>Playwright</span><span>TypeScript</span><span>GitHub Actions</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="proj-top">
+              <div class="proj-icon"><i class="fas fa-plug"></i></div>
+              <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="proj-gh" aria-label="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h3 class="proj-title">API Test Suite</h3>
+            <p class="proj-desc">
+              Comprehensive REST API testing suite with schema validation, data-driven tests, and an automated regression pipeline integrated with Jenkins.
+            </p>
+            <div class="proj-stack">
+              <span>Playwright</span><span>JavaScript</span><span>Jenkins</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="proj-top">
+              <div class="proj-icon"><i class="fas fa-mobile-alt"></i></div>
+              <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="proj-gh" aria-label="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <h3 class="proj-title">Mobile Automation Suite</h3>
+            <p class="proj-desc">
+              Cross-platform mobile testing framework using Appium and WebDriverIO targeting both Android and iOS applications with shared page objects.
+            </p>
+            <div class="proj-stack">
+              <span>Appium</span><span>WebDriverIO</span><span>JavaScript</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta reveal">
+          <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fab fa-github"></i> View All on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Education ====== -->
+    <section id="education" class="section" aria-labelledby="edu-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Background</span>
+          <h2 id="edu-h" class="section-title">Education</h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-body">
+              <span class="edu-year">2017 – 2021</span>
+              <h3>B.Sc in Computer Science &amp; Engineering</h3>
+              <p class="edu-school">Daffodil International University, Dhaka, Bangladesh</p>
+              <span class="edu-cgpa">CGPA: 3.53 / 4.00</span>
+              <p class="edu-thesis"><strong>Thesis:</strong> A Comparative Study on Detecting Bangla Fake News on Social Media Using Machine Learning Algorithms</p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-body">
+              <span class="edu-year">2014 – 2016</span>
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <p class="edu-school">Cox's Bazar Government College, Cox's Bazar, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Contact ====== -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-h">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Contact</span>
+          <h2 id="contact-h" class="section-title">Get in Touch</h2>
+          <p class="section-desc">Have an opportunity or project in mind? I'd love to connect.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-cards reveal">
+            <a href="mailto:ansaryhere@gmail.com" class="contact-card">
+              <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+              <div class="cc-detail">
+                <span class="cc-label">Email</span>
+                <span class="cc-value">ansaryhere@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right cc-arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="cc-detail">
+                <span class="cc-label">LinkedIn</span>
+                <span class="cc-value">linkedin.com/in/adilansary</span>
+              </div>
+              <i class="fas fa-arrow-right cc-arrow"></i>
+            </a>
+            <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="cc-icon"><i class="fab fa-github"></i></div>
+              <div class="cc-detail">
+                <span class="cc-label">GitHub</span>
+                <span class="cc-value">github.com/adilansary</span>
+              </div>
+              <i class="fas fa-arrow-right cc-arrow"></i>
+            </a>
+            <a href="tel:+8801521402253" class="contact-card">
+              <div class="cc-icon"><i class="fas fa-phone"></i></div>
+              <div class="cc-detail">
+                <span class="cc-label">Phone</span>
+                <span class="cc-value">+880 1521 402253</span>
+              </div>
+              <i class="fas fa-arrow-right cc-arrow"></i>
+            </a>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name" />
+                <span class="field-err" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+                <span class="field-err" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="field-err" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">Adil<span class="accent-dot">.</span></a>
+          <p>SQA Engineer · Automation Specialist</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://github.com/adilansary" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/adilansary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:ansaryhere@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Adil Ansary. Built with precision.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
-
 </html>
