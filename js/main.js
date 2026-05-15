@@ -180,7 +180,7 @@
      Typing Animation
      ================================================================ */
   const typedEl = document.getElementById('typed-role');
-  const phrases = [
+  const phrases = (window.PortfolioData && window.PortfolioData.hero && window.PortfolioData.hero.typedPhrases) || [
     'automation frameworks',
     'E2E test pipelines',
     'API test suites',
@@ -265,8 +265,9 @@
       const subject = form.querySelector('#cf-subject')?.value.trim() || 'Portfolio Contact';
       const message = form.querySelector('#cf-message')?.value.trim() || '';
 
+      const recipient = (window.PortfolioData && window.PortfolioData.contact && window.PortfolioData.contact.formRecipient) || 'ansaryhere@gmail.com';
       const body    = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
-      const mailto  = `mailto:ansaryhere@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      const mailto  = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
       window.location.href = mailto;
 
       if (formStatus) {
