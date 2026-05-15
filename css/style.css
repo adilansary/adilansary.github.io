@@ -1013,8 +1013,9 @@ section[id], header[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
    Responsive — Tablet
    ============================================================ */
 @media (max-width: 900px) {
-  .hero-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-  .hero-visual  { display: none; }
+  .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-visual  { order: -1; justify-content: center; }
+  .avatar-wrap  { width: clamp(140px, 38vw, 200px); height: clamp(140px, 38vw, 200px); }
   .hero-name    { font-size: clamp(2.5rem, 10vw, 3.5rem); }
   .stats-bar    { justify-content: center; gap: 0.5rem; }
   .stat-divider { display: none; }
@@ -1062,6 +1063,8 @@ section[id], header[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 @media (max-width: 480px) {
   .container { padding: 0 1rem; }
   .hero       { padding-top: calc(var(--nav-h) + 2rem); }
+  .avatar-ring    { inset: -8px; }
+  .avatar-ring.r2 { inset: -16px; }
   .hero-actions { flex-direction: column; }
   .btn        { width: 100%; justify-content: center; }
   .stats-bar  { padding: 1.25rem 1rem; }
